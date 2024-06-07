@@ -11,9 +11,6 @@ public class pause : MonoBehaviour
     {
         UnityEngine.Time.timeScale = 0f;
         pausePanel.SetActive(true);
-        
-        
-
     }
     public void Resume()
     {
@@ -24,7 +21,9 @@ public class pause : MonoBehaviour
     { 
         pausePanel.SetActive(false);
         SceneManager.LoadScene(1);
+        SaveData.playerHealth = 100;
         UnityEngine.Time.timeScale = 1f;
+
     }
     public void Quit()
     {
